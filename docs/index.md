@@ -32,6 +32,7 @@ Se ha optado por una configuración económica adecuada para uso doméstico.
 <p align="center">
   <img src="../imagenes/synology.jpg" alt="synology" width="300">
 </p>
+
 * 2 discos duros
 * Cable de red Ethernet
 * Equipo informático para configuración
