@@ -29,6 +29,9 @@ Se ha optado por una configuración económica adecuada para uso doméstico.
 ## 4. Material utilizado
 
 * NAS Synology
+<p align="center">
+  <img src="../imagenes/synology.png" alt="discos" width="300">
+</p>
 * 2 discos duros
 * Cable de red Ethernet
 * Equipo informático para configuración
