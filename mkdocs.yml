@@ -1,0 +1,8 @@
+site_name: Montaje NAS doméstico
+site_author: Alexis
+
+theme:
+  name: material
+
+nav:
+  - Inicio: index.md
