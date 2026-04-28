@@ -40,7 +40,7 @@ Se ha optado por una configuración económica adecuada para uso doméstico.
 Se insertan los discos duros en las bandejas del NAS asegurando su correcta fijación.
 
 <p align="center">
-  <img src="../imagenes/discos.png" alt="discos">
+  <img src="../imagenes/discos.png" alt="discos" width="300">
 </p>
 
 
