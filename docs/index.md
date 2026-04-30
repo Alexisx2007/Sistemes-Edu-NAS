@@ -1,129 +1,143 @@
 # Montaje de un NAS en entorno doméstico
 
-## 1. Introducción
+## Introducción
 
-Un NAS (Network Attached Storage) es un dispositivo de almacenamiento conectado a una red que permite centralizar archivos y acceder a ellos desde distintos dispositivos.
+Un NAS (Network Attached Storage) es un dispositivo de almacenamiento conectado a la red que permite guardar archivos y acceder a ellos desde distintos dispositivos como ordenadores, móviles o tablets. En este proyecto no solo se plantea su montaje como práctica, sino como una solución real pensada para mi casa.
 
-En este proyecto se plantea el montaje de un NAS en un entorno doméstico, con el objetivo de disponer de almacenamiento propio, accesible y seguro, evitando costes elevados y servicios externos.
+La idea principal es disponer de un sistema donde poder almacenar archivos personales, especialmente fotos y vídeos, que suelen ocupar bastante espacio. Además, también busco tener una copia de seguridad de estos datos, evitando depender de servicios en la nube y teniendo un mayor control sobre la información.
 
-## 2. Objetivo del proyecto
+---
 
-El objetivo principal es diseñar e implementar un sistema NAS para uso personal que cumpla con los siguientes requisitos:
+## Elección del hardware y presupuesto
 
-* Bajo coste
-* Facilidad de uso
-* Seguridad de los datos
-* Acceso desde múltiples dispositivos
+Para montar el NAS he buscado una opción que sea económica pero que al mismo tiempo cumpla con lo que necesito a nivel personal.
 
-## 3. Presupuesto
+He elegido un NAS Synology DS223j, que es un modelo de dos bahías orientado a uso doméstico. Su precio ronda los 214,90 € en Amazon y ofrece lo necesario para gestionar almacenamiento en red sin complicaciones. No he optado por modelos más avanzados porque no necesito un alto rendimiento, sino un sistema fiable para guardar archivos y acceder a ellos.
 
-| Componente     | Precio aproximado    |
-| -------------- | -------------------- |
-| NAS Synology   | 200€ - 300€          |
-| Discos duros   | 30€ - 50€ (cada uno) |
-| Cable Ethernet | 5€                   |
-| Total estimado | 235€ - 355€          |
+En cuanto al almacenamiento, he decidido utilizar dos discos duros Seagate Barracuda de 1 TB cada uno, con un precio aproximado de 99,99 € por unidad. Esta capacidad es suficiente para empezar y cubrir el uso que le voy a dar, sobre todo teniendo en cuenta que los vídeos y las fotos pueden ocupar bastante espacio.
 
-Se ha optado por una configuración económica adecuada para uso doméstico.
+El coste total del sistema se sitúa alrededor de los 414 €, lo cual considero razonable teniendo en cuenta que es una solución propia, sin costes mensuales y con posibilidad de ampliación en el futuro.
 
-## 4. Material utilizado
+---
 
-* NAS Synology
+## 3.1 NAS seleccionado
+
+### Synology DS223j
+
+Modelo elegido:  
+Synology DS223j NAS de escritorio de 2 bahías  
+
+Precio aproximado: 214,90 €  
+Enlace: https://amzn.eu/d/03WKHmZK
 <p align="center">
-  <img src="../imagenes/synology.jpg" alt="synology" width="300">
+  <img src="../imagenes/synology.jpg" alt="discos" width="300">
 </p>
 
-* 2 discos duros
-* Cable de red Ethernet
-* Equipo informático para configuración
+---
 
-## 5. Instalación del sistema
+## 3.2 Discos duros seleccionados
 
-### 5.1 Instalación de discos
+Modelo elegido:  
+Seagate Barracuda 1TB (ST1000DMZ14)
 
-Se insertan los discos duros en las bandejas del NAS asegurando su correcta fijación.
+Precio aproximado: 99,99 € (cada uno)  
+Enlace: https://amzn.eu/d/03RrMA1Q
+
+Se utilizarán 2 discos duros.
+
+### Configuración
+
+- 2 discos duros de 1 TB  
+- Configuración RAID 1  
+
+<p align="center">
+  <img src="../imagenes/disco.jpg" alt="discos" width="100">
+</p>
+
+---
+
+## 3.3 Coste total estimado
+
+| Componente | Modelo | Precio aproximado |
+|-----------|--------|------------------|
+| NAS | Synology DS223j | 214,90 € |
+| Disco duro x2 | Seagate Barracuda 1TB | 199,98 € |
+| **Total estimado** | — | **414,88 €** |
+
+---
+
+## Configuración del almacenamiento
+
+Uno de los aspectos más importantes en este proyecto es la configuración del RAID. En este caso he utilizado RAID 1, que consiste en duplicar los datos en ambos discos duros.
+
+Esto significa que toda la información se guarda en los dos discos al mismo tiempo. De esta forma, si uno de ellos falla, los datos siguen estando disponibles en el otro. Para el uso que le voy a dar, esto es clave, ya que voy a almacenar archivos personales importantes como fotos y vídeos.
+
+---
+
+## Instalación del sistema
+
+El proceso de montaje comienza con la instalación de los discos duros dentro del NAS, asegurándose de que queden bien colocados en sus bandejas.
 
 <p align="center">
   <img src="../imagenes/discos.png" alt="discos" width="300">
 </p>
 
-
-### 5.2 Conexión del dispositivo
-
-El NAS se conecta a la corriente eléctrica y al router mediante cable Ethernet.
-
-### 5.3 Acceso al sistema
-
-Se accede al NAS desde el navegador utilizando la dirección IP asignada en la red.
+Una vez instalados, se conecta el NAS a la corriente eléctrica y al router mediante un cable de red. Al encenderlo, el dispositivo obtiene una dirección IP dentro de la red local, que permite acceder a su configuración desde el navegador.
 
 <p align="center">
   <img src="../imagenes/ip.png" alt="ip" width="300">
 </p>
 
-## 6. Configuración inicial
+---
 
-### 6.1 Creación del usuario administrador
+## Configuración inicial
 
-Se crea el primer usuario con privilegios de administración para gestionar el sistema.
+Después de acceder al sistema, el siguiente paso es realizar la configuración inicial. En primer lugar, se crea el usuario administrador, que será el encargado de gestionar el NAS.
 
 <p align="center">
   <img src="../imagenes/usuario.png" alt="usuario" width="300">
 </p>
 
-### 6.2 Configuración del almacenamiento
-
-Se configura el sistema en RAID 1 para garantizar la redundancia de datos.
+A continuación, se configura el almacenamiento en RAID 1, lo que permite garantizar la seguridad de los datos.
 
 <p align="center">
   <img src="../imagenes/raid1.png" alt="raid1" width="300">
 </p>
 
-#### RAID 1
+---
 
-El RAID 1 consiste en la duplicación de datos en dos discos, permitiendo mantener la información en caso de fallo de uno de ellos.
+## Gestión de usuarios
 
-## 7. Gestión de usuarios
-
-### 7.1 Creación de usuarios
-
-Se crean los distintos usuarios que tendrán acceso al sistema.
+Una vez el sistema está configurado, se pueden crear los distintos usuarios que van a utilizar el NAS. Esto permite que cada persona tenga su propio acceso.
 
 <p align="center">
   <img src="../imagenes/usuarios.png" alt="usuarios" width="300">
 </p>
 
-### 7.2 Configuración de permisos
-
-Se asignan permisos específicos a cada usuario en función de sus necesidades.
+También es posible asignar permisos a cada usuario, controlando qué carpetas pueden ver o modificar. Esto es útil para organizar la información y mantener cierto nivel de seguridad.
 
 <p align="center">
   <img src="../imagenes/permisos.png" alt="permisos" width="300">
 </p>
 
-## 8. Pruebas de funcionamiento
+---
 
-Se verifica el acceso al NAS desde distintos dispositivos dentro de la red.
+## Pruebas de funcionamiento
+
+Para comprobar que todo funciona correctamente, se ha accedido al NAS desde distintos dispositivos conectados a la misma red.
 
 <p align="center">
   <img src="../imagenes/acceso.png" alt="acceso" width="300">
 </p>
 
-Se comprueba que:
+En estas pruebas se ha verificado que el acceso es correcto, que los archivos están disponibles y que el sistema responde de forma adecuada.
 
-* El acceso es correcto
-* Los archivos son visibles
-* El sistema funciona con normalidad
+---
 
-## 9. Conclusión
+## Conclusión
 
-El montaje de un NAS en un entorno doméstico es una solución eficiente para la gestión de archivos personales.
+Montar un NAS en casa es una solución muy útil cuando se manejan archivos que ocupan bastante espacio, como vídeos o colecciones de fotos. Permite tener todo organizado en un único lugar y acceder a ello de forma sencilla desde distintos dispositivos.
 
-Permite disponer de almacenamiento propio, seguro y accesible, con una inversión reducida en comparación con otras alternativas.
+En este caso, he buscado una configuración que sea económica pero suficiente para el uso que le voy a dar. El uso de RAID 1 aporta seguridad, y el hardware elegido cumple con las necesidades sin suponer un gasto excesivo.
 
-La configuración en RAID 1 aporta una capa adicional de seguridad, siendo una opción recomendable para uso personal.
-
-## 10. Opinión personal
-
-Considero que la implementación de un NAS en casa es una solución práctica y económica, especialmente para usuarios que necesitan gestionar grandes volúmenes de datos o mantener copias de seguridad.
-
-La relación calidad/precio obtenida en este proyecto es adecuada para un entorno doméstico.
+Por ello, considero que esta solución es adecuada para un entorno doméstico real, combinando funcionalidad, seguridad y un coste razonable.
